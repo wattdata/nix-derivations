@@ -25,6 +25,16 @@ jobs:
         env:
           NIXPKGS_ALLOW_UNFREE: 1
 
+      - name: Build and test nsc
+        run: |
+          nix build .#nsc --print-build-logs
+          ./result/bin/nsc version
+
+      - name: Build devbox
+        run: |
+          nix build .#devbox --print-build-logs
+          test -x ./result/bin/devbox
+
       - name: Build and test beads
         run: |
           nix build .#beads --print-build-logs

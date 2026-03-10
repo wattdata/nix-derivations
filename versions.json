@@ -1,4 +1,24 @@
 {
+  "nsc": {
+    "version": "0.0.489",
+    "repo": "namespacelabs/foundation",
+    "hashes": {
+      "x86_64-linux": "sha256-BOlQmNZNUPaE6ACwZxpzF8rU3NCSgx8r8F5j1o+Etyw=",
+      "aarch64-linux": "sha256-1U1nvzL+2zet8X4EtkPegzwWyfSe46W+xC/glYPJRrE=",
+      "x86_64-darwin": "sha256-UGgu83SG4dOZm6nqB3KJlgR1SeB/CXZWNZopYV+Dgz0=",
+      "aarch64-darwin": "sha256-GOOUH0AGL9EY+0JSfeLaNrFDLrLx0/7QFJaoIYgGTTo="
+    }
+  },
+  "devbox": {
+    "version": "0.0.116",
+    "repo": "namespacelabs/devbox",
+    "hashes": {
+      "x86_64-linux": "sha256-vfaqjze2KMLPQBLIgAFAkWSHEs7J6xE/OAAm5oQsh38=",
+      "aarch64-linux": "sha256-B9cgaNemGeRdWTSrXzhHPanZwFoOkhGQBsutiC+u8hI=",
+      "x86_64-darwin": "sha256-ScQYvZGamq+VSvco/bVQCyFH02bEkAcg+vrbOfR1JGA=",
+      "aarch64-darwin": "sha256-A04xfAm7hyXt4/szi3oFCQbKP1vX9gWG0F2tvlkQiFk="
+    }
+  },
   "beads": {
     "version": "0.49.6",
     "repo": "steveyegge/beads",
