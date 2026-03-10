@@ -11,6 +11,80 @@ hex_to_sri() {
     nix hash convert --hash-algo sha256 --to sri "$1"
 }
 
+update_nsc() {
+    local version="${1:-}"
+
+    if [[ -z "$version" ]]; then
+        echo "Fetching latest nsc version..."
+        version=$(curl -s https://api.github.com/repos/namespacelabs/foundation/releases/latest | jq -r '.tag_name' | sed 's/^v//')
+    fi
+
+    echo "Updating nsc to $version..."
+
+    local checksums
+    checksums=$(curl -sL "https://github.com/namespacelabs/foundation/releases/download/v${version}/checksums.txt")
+
+    local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_amd64" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_arm64" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_amd64" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_arm64" | awk '{print $1}')")
+
+    local tmp
+    tmp=$(mktemp)
+    jq --arg ver "$version" \
+       --arg h1 "$x86_64_linux" \
+       --arg h2 "$aarch64_linux" \
+       --arg h3 "$x86_64_darwin" \
+       --arg h4 "$aarch64_darwin" \
+       '.nsc.version = $ver |
+        .nsc.hashes["x86_64-linux"] = $h1 |
+        .nsc.hashes["aarch64-linux"] = $h2 |
+        .nsc.hashes["x86_64-darwin"] = $h3 |
+        .nsc.hashes["aarch64-darwin"] = $h4' \
+       "$VERSIONS_FILE" > "$tmp"
+    mv "$tmp" "$VERSIONS_FILE"
+
+    echo "Updated nsc to $version"
+}
+
+update_devbox() {
+    local version="${1:-}"
+
+    if [[ -z "$version" ]]; then
+        echo "Fetching latest devbox version..."
+        version=$(curl -s https://api.github.com/repos/namespacelabs/devbox/releases/latest | jq -r '.tag_name' | sed 's/^v//')
+    fi
+
+    echo "Updating devbox to $version..."
+
+    local checksums
+    checksums=$(curl -sL "https://github.com/namespacelabs/devbox/releases/download/v${version}/devbox_checksums.txt")
+
+    local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64" | awk '{print $1}')")
+
+    local tmp
+    tmp=$(mktemp)
+    jq --arg ver "$version" \
+       --arg h1 "$x86_64_linux" \
+       --arg h2 "$aarch64_linux" \
+       --arg h3 "$x86_64_darwin" \
+       --arg h4 "$aarch64_darwin" \
+       '.devbox.version = $ver |
+        .devbox.hashes["x86_64-linux"] = $h1 |
+        .devbox.hashes["aarch64-linux"] = $h2 |
+        .devbox.hashes["x86_64-darwin"] = $h3 |
+        .devbox.hashes["aarch64-darwin"] = $h4' \
+       "$VERSIONS_FILE" > "$tmp"
+    mv "$tmp" "$VERSIONS_FILE"
+
+    echo "Updated devbox to $version"
+}
+
 update_beads() {
     local version="${1:-}"
 
@@ -93,11 +167,17 @@ Update versions.json with latest versions and hashes for pinned packages.
 Usage: $0 <command> [version]
 
 Commands:
+  nsc [version]          Update nsc (omit version for latest)
+  devbox [version]       Update devbox (omit version for latest)
   beads [version]        Update beads (omit version for latest)
   claude-code [version]  Update claude-code (omit version for latest)
   all                    Update all packages to latest
 
 Examples:
+  $0 nsc                # Update nsc to latest
+  $0 nsc 0.0.489        # Pin nsc to specific version
+  $0 devbox             # Update devbox to latest
+  $0 devbox 0.0.116     # Pin devbox to specific version
   $0 beads              # Update beads to latest
   $0 beads 0.50.0       # Pin beads to specific version
   $0 claude-code        # Update claude-code to latest
@@ -107,6 +187,12 @@ EOF
 }
 
 case "${1:-}" in
+    nsc)
+        update_nsc "${2:-}"
+        ;;
+    devbox)
+        update_devbox "${2:-}"
+        ;;
     beads)
         update_beads "${2:-}"
         ;;
@@ -114,8 +200,10 @@ case "${1:-}" in
         update_claude_code "${2:-}"
         ;;
     all)
-        update_beads "${2:-}"
-        update_claude_code "${3:-}"
+        update_nsc "${2:-}"
+        update_devbox "${3:-}"
+        update_beads "${4:-}"
+        update_claude_code "${5:-}"
         ;;
     -h|--help)
         usage

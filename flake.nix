@@ -26,6 +26,14 @@
       in
       {
         packages = {
+          nsc = pkgs.callPackage ./pkgs/nsc {
+            inherit (versions.nsc) version hashes;
+          };
+
+          devbox = pkgs.callPackage ./pkgs/devbox {
+            inherit (versions.devbox) version hashes;
+          };
+
           beads = pkgs.callPackage ./pkgs/beads {
             inherit (versions.beads) version hashes;
           };
@@ -40,6 +48,12 @@
     ) // {
       # Overlay for use in other flakes
       overlays.default = final: prev: {
+        nsc = prev.callPackage ./pkgs/nsc {
+          inherit (versions.nsc) version hashes;
+        };
+        devbox = prev.callPackage ./pkgs/devbox {
+          inherit (versions.devbox) version hashes;
+        };
         beads = prev.callPackage ./pkgs/beads {
           inherit (versions.beads) version hashes;
         };
