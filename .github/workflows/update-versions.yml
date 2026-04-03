@@ -1,0 +1,77 @@
+name: Update Versions
+
+on:
+  schedule:
+    # Run daily at 08:00 UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Save pre-update versions
+        run: cp versions.json /tmp/versions-before.json
+
+      - name: Update all package versions
+        run: ./scripts/update-versions.sh all
+
+      - name: Check for changes and build commit message
+        id: changes
+        run: |
+          msg="chore: update"
+          first=true
+          changed=false
+          for pkg in $(jq -r 'keys[]' versions.json); do
+            old=$(jq -r --arg p "$pkg" '.[$p].version' /tmp/versions-before.json)
+            new=$(jq -r --arg p "$pkg" '.[$p].version' versions.json)
+            if [ "$old" != "$new" ]; then
+              changed=true
+              if [ "$first" = true ]; then
+                msg="$msg $pkg to $new"
+                first=false
+              else
+                msg="$msg, $pkg to $new"
+              fi
+            fi
+          done
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          echo "msg=$msg" >> "$GITHUB_OUTPUT"
+
+      - name: Create PR with auto-merge
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="update-versions-$(date +%Y-%m-%d)"
+          MSG="${{ steps.changes.outputs.msg }}"
+
+          # Check if a PR from this branch already exists
+          EXISTING=$(gh pr list --head "$BRANCH" --state open --json number -q '.[0].number' 2>/dev/null || true)
+          if [ -n "$EXISTING" ]; then
+            echo "PR #$EXISTING already exists for branch $BRANCH, skipping"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add versions.json
+          git commit -m "$MSG"
+          git push -u origin "$BRANCH" --force
+
+          PR_URL=$(gh pr create \
+            --title "$MSG" \
+            --body "Automated daily version update." \
+            --base main \
+            --head "$BRANCH")
+
+          gh pr merge "$PR_URL" --auto --squash
