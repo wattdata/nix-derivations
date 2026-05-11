@@ -46,6 +46,10 @@
             inherit (versions.signoz-mcp-server) version hashes;
           };
 
+          seaweedfs = pkgs.callPackage ./pkgs/seaweedfs {
+            inherit (versions.seaweedfs) version hashes;
+          };
+
           claude-code = pkgs.callPackage ./pkgs/claude-code {
             inherit (versions.claude-code) version hashes;
           };
@@ -70,6 +74,9 @@
         };
         signoz-mcp-server = prev.callPackage ./pkgs/signoz-mcp-server {
           inherit (versions.signoz-mcp-server) version hashes;
+        };
+        seaweedfs = prev.callPackage ./pkgs/seaweedfs {
+          inherit (versions.seaweedfs) version hashes;
         };
         claude-code = prev.callPackage ./pkgs/claude-code {
           inherit (versions.claude-code) version hashes;

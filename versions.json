@@ -49,6 +49,16 @@
       "aarch64-darwin": "sha256-Aqhw3f3szCXuwXtrlBh++ioyVQLQFOEjCRZFZNrwU2s="
     }
   },
+  "seaweedfs": {
+    "version": "4.23",
+    "repo": "seaweedfs/seaweedfs",
+    "hashes": {
+      "x86_64-linux": "sha256-o9q24lM47LMow/ng8uEkQaIvTr8pkd1vClaN5PA4XNY=",
+      "aarch64-linux": "sha256-9UvtOFISd4p6FBzQQGsVDBsT1FlgvEt8UhGWGAPAl9U=",
+      "x86_64-darwin": "sha256-rBbd/JvPh+XKEeowTSZsbLvV9sZGt0+5tK/7Wo2j31I=",
+      "aarch64-darwin": "sha256-UDqjvn7DBk841727AO/Mje3lqJjWHK1yKMO9IVN0Eh4="
+    }
+  },
   "claude-code": {
     "version": "2.1.119",
     "hashes": {
