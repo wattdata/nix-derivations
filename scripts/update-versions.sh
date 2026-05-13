@@ -59,7 +59,7 @@ update_devbox() {
     echo "Updating devbox to $version..."
 
     local checksums
-    checksums=$(curl -sL "https://github.com/namespacelabs/devbox/releases/download/v${version}/devbox_checksums.txt")
+    checksums=$(curl -sL "https://github.com/namespacelabs/devbox/releases/download/v${version}/checksums.txt")
 
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
     x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64" | awk '{print $1}')")
