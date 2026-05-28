@@ -10,13 +10,13 @@
     }
   },
   "devbox": {
-    "version": "0.0.152",
+    "version": "0.0.153",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-0vXO6CR9504fpmHLfKDZD5qfgvrBja02UDc/53cGozE=",
-      "aarch64-linux": "sha256-TC0fOcN7/yllFdQiUTbg6buT7hXnKhx0aLjZOxYHOic=",
-      "x86_64-darwin": "sha256-AnW3yfUWLGdscr/tnsD/flOY/6bY69uIrKmERdIdhms=",
-      "aarch64-darwin": "sha256-HhqIqQoWL+9aHJE1HpEHuPimuTudlmF1EkcphMroUSU="
+      "x86_64-linux": "sha256-SJx82Ajaxt7u0GEy0qFzjxaTw9w3l79/6RH0Wr+P7Rs=",
+      "aarch64-linux": "sha256-slT63oXV1XhXob+f5S05U7lv/lbjoAg2XhreF1DU24g=",
+      "x86_64-darwin": "sha256-UmwSayIF3TB86ZdCOLNwpp6nZMOOD9PfuGOK3NEwPEQ=",
+      "aarch64-darwin": "sha256-onWwGqWYRjdaOVNKOj9RubrdDo10rSzF9H5rL5v8ZEI="
     }
   },
   "beads": {
@@ -60,12 +60,12 @@
     }
   },
   "claude-code": {
-    "version": "2.1.152",
+    "version": "2.1.153",
     "hashes": {
-      "x86_64-linux": "sha256-UVW9yif3VKug0v4vgDNvX9R5MiRWHCNKcj8MzvZUqOg=",
-      "aarch64-linux": "sha256-Ne8mhcT2ebXEYQ71azCmgLbVlblYtPpewL+ihSGV80U=",
-      "x86_64-darwin": "sha256-6ez42nBRik/4UrrzbJ6sNpdipFaLo81QePqJQwPjlzU=",
-      "aarch64-darwin": "sha256-Q8uTYfe8SMOSFNXxJQA7jeDr3lzWoRc+a3T83RCWbUY="
+      "x86_64-linux": "sha256-IU9gPzGUIWLayaZfGNQ7OsZGriFSQPrUgcSq1sYPLjg=",
+      "aarch64-linux": "sha256-Ynf7vqciKKBp5HGfw+X6NvFnSSR6IyHFINrpPoPpLZw=",
+      "x86_64-darwin": "sha256-S5BSHGS3KMqr4iFzfOioPTYu8IUu7n14nwFPf/c86Xs=",
+      "aarch64-darwin": "sha256-RJ2cidemOx1CfZEqe9bm8j+aezY4Zml8n6mgASVGslQ="
     }
   }
 }
