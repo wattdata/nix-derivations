@@ -10,13 +10,13 @@
     }
   },
   "devbox": {
-    "version": "0.0.156",
+    "version": "0.0.157",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-IAVsM0rgKT4rF74wOajJIP5EAOuBbtQZR++Iefp5jNw=",
-      "aarch64-linux": "sha256-H6DniP09iOIGTkfz56HSqdwjUqNFcl3ExC3cqY0qhVw=",
-      "x86_64-darwin": "sha256-Q9p3ILf2jDuhOS9EalftMO2e0THVxosFpaA3DXesEhE=",
-      "aarch64-darwin": "sha256-NkOmDIYM3GAKhwuF13ZsJG7ArP9D3V+TWLMAYhxMy38="
+      "x86_64-linux": "sha256-srn4HoPTJFzVS0JTgRTW/u0jcpWcuFFC0mChWtXmvhI=",
+      "aarch64-linux": "sha256-uEkuWXVbJW+IGjabANNgIpu87bF3Qm5gavvgyc3fz+Y=",
+      "x86_64-darwin": "sha256-e+snkCEbDDNE+Gk/vNWVgXGf15OlJHMhx/sL+kGocAU=",
+      "aarch64-darwin": "sha256-E7e0SsEZNUX0vGUkhIym+3l4T1LXDrnLev55cUuc8sE="
     }
   },
   "beads": {
