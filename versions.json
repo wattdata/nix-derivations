@@ -40,13 +40,13 @@
     }
   },
   "signoz-mcp-server": {
-    "version": "0.4.1",
+    "version": "0.4.2",
     "repo": "SigNoz/signoz-mcp-server",
     "hashes": {
-      "x86_64-linux": "sha256-uCq6CqUiCRYTcPQwzwTWSrILVeZpbfhPtbqAq2pf/cE=",
-      "aarch64-linux": "sha256-P9ZCqjfHl2U7FvzXg910hGI9X6TDygRla51TdWFf05E=",
-      "x86_64-darwin": "sha256-cufMIoovc9R7oTHY/rXxi4SOH0/SahcCB1bMKElShpg=",
-      "aarch64-darwin": "sha256-GWTL5JePWMFCSrBaNjbifg6kduR5bQnuqWjO9j0/oMg="
+      "x86_64-linux": "sha256-q3iSOxNX+QCdsrJuVR41QtB+ghRTFfJYtg74h/Zof7A=",
+      "aarch64-linux": "sha256-97eomHW6tvkOOSLD9Tak4vGJArNsXPXMsHFH7f4EyHg=",
+      "x86_64-darwin": "sha256-zuLFVDNICNP13gZzs5H16TSZ5/QpUgtW+4C+s/jHjNQ=",
+      "aarch64-darwin": "sha256-NfYu3koeWOsN9WqpR+wur9V2TF3MySUGm+2GmyCnX4w="
     }
   },
   "seaweedfs": {
