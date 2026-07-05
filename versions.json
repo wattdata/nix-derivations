@@ -30,13 +30,13 @@
     }
   },
   "gh-dash": {
-    "version": "4.24.1",
+    "version": "4.25.0",
     "repo": "dlvhdr/gh-dash",
     "hashes": {
-      "x86_64-linux": "sha256-bOAUN2SJpHG9yry+Pl8yaqBK2UAAhXq7HaOKnsLG1HM=",
-      "aarch64-linux": "sha256-LKCXV3cbXSLdJF3VdpjItM5jwbMacRTNP5LgK9uJLXY=",
-      "x86_64-darwin": "sha256-5MrsGxEvIWyoEukqD32/VxPra99fMCz2GFFIuE8J/EA=",
-      "aarch64-darwin": "sha256-wwh70Ft80nJ8v+uWcB+AVEEJ9LklrpiDanQSm73mRek="
+      "x86_64-linux": "sha256-0VJAfIe4eKsACkBbFDDR9gq7mj/hsfjnUmAek6P8SJ4=",
+      "aarch64-linux": "sha256-vqgaPftmKgejGkBnjExJUr0mVCDuu/BTxcJRjq6oCnY=",
+      "x86_64-darwin": "sha256-nSfzPC/4Mrd5K4MEYstvGGYtebT+b5of9Lz3w+djuTU=",
+      "aarch64-darwin": "sha256-zuDrSpUZvrqFm1WW07Cnkdl+4uxR7k9tlFBf/BEXls0="
     }
   },
   "signoz-mcp-server": {
