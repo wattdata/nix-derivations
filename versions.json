@@ -20,13 +20,13 @@
     }
   },
   "beads": {
-    "version": "1.1.0",
+    "version": "1.1.2",
     "repo": "gastownhall/beads",
     "hashes": {
-      "x86_64-linux": "sha256-sPPdYHw/uYnuCNCmhU+6gNBAKXHrEI+a9hcLwU1JGjQ=",
-      "aarch64-linux": "sha256-5k629fmYyerj757HhvXxyQerPtBP4iDr8mXKmVLiGy8=",
-      "x86_64-darwin": "sha256-XX0w/a3PASt+DBkzpizfrvEG4lYVCbkE5QpnM2Ic+No=",
-      "aarch64-darwin": "sha256-xC4k2Dslj3up9SptLV9rBVhp3+eAcWUFWYixLn6oxWQ="
+      "x86_64-linux": "sha256-py1x7TdJVdyfg6D5C1S9e2oAFnCd0Wdq4uNoZR7UAcI=",
+      "aarch64-linux": "sha256-oTQBX69L4KQ/hoGo1gLq8LfCVclX8J08kzJXyMkv3RA=",
+      "x86_64-darwin": "sha256-DpTekxnJ1my34AOLsX669d0v5mnjZqS5FTUotHShqPY=",
+      "aarch64-darwin": "sha256-mwE3qDoq/TQ+Kr0qUGvnLqAychAA92Zpws+Bcp54UB0="
     }
   },
   "gh-dash": {
@@ -40,13 +40,13 @@
     }
   },
   "signoz-mcp-server": {
-    "version": "0.9.0",
+    "version": "0.10.0",
     "repo": "SigNoz/signoz-mcp-server",
     "hashes": {
-      "x86_64-linux": "sha256-SMBYRvbc5a4V/3UxTaxwnMaK60rfSMD/E8ka0h9LLN0=",
-      "aarch64-linux": "sha256-Pffg1Y5LZLxLaGE/6gohbLc+RQhjH1bV7kRVd6DCXnY=",
-      "x86_64-darwin": "sha256-QNnOWUaTgdqSEttgTl2XHNansT6osPkDvbSzjoRc884=",
-      "aarch64-darwin": "sha256-KypxHVlbwMeShuSmUB+tBexv5ce0as7FnHrBIVBoEJs="
+      "x86_64-linux": "sha256-/OptWa8tGhRX7ECyclz6XcuWDRua9F97css020ROgOY=",
+      "aarch64-linux": "sha256-lSGJPloQ8TBs8V5c7NKtlcQyNn229katbTe0vYop+qs=",
+      "x86_64-darwin": "sha256-MkFC9F/HKvH53tifVxaaVyg5wkD73y53GYdYrA7olWc=",
+      "aarch64-darwin": "sha256-D5+Ns3sFEVgyQIPQM5EumP7AQJowCNlr7iprBV30CoI="
     }
   },
   "seaweedfs": {
