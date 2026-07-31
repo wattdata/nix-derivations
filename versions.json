@@ -1,12 +1,12 @@
 {
   "nsc": {
-    "version": "0.0.550",
+    "version": "0.0.551",
     "repo": "namespacelabs/foundation",
     "hashes": {
-      "x86_64-linux": "sha256-uW6PCqVQOBMBwrZcJ4wjs7yMgHJKCZpOAxCHY9S7+Lc=",
-      "aarch64-linux": "sha256-P2feS7rygfGAIOOV3SSE9lvxMo281rmip7jf8ra7FOc=",
-      "x86_64-darwin": "sha256-AdHyW+CvV2AQp6pBs3Wim+HGXXn0nE1PndnL/9c9DCk=",
-      "aarch64-darwin": "sha256-DYgDHyNTIVMV/vZrajLKmlirnifmwgS/ohLlOKBaUoM="
+      "x86_64-linux": "sha256-2Ip69WLe+VgbF2E74r4A4ZFfygMfiV+SMqgtGs87b7I=",
+      "aarch64-linux": "sha256-0+KpniE+7nQsFip1Tg5Z42xjAOlhPpdfmwEhQh5Ep4c=",
+      "x86_64-darwin": "sha256-tpv81Cu1/7b2vq4Tiw4Z7pqCI3SCCiEKRRgJ2rEcX+g=",
+      "aarch64-darwin": "sha256-x3FYe8DT+5U4D506ioSUfmiT5unG6CGMiGf4r/9jPpc="
     }
   },
   "devbox": {
