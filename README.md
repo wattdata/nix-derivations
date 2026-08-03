@@ -11,6 +11,7 @@ Personal Nix derivations for bleeding-edge packages.
 | `devbox` | Namespace devbox - portable development environments |
 | `beads` | Distributed, git-backed graph issue tracker for AI coding agents |
 | `gh-dash` | A beautiful CLI dashboard for GitHub |
+| `codex` | OpenAI Codex CLI - coding agent that runs in the terminal |
 
 ## Supported Platforms
 
@@ -48,6 +49,7 @@ Personal Nix derivations for bleeding-edge packages.
           pkgs.devbox
           pkgs.beads
           pkgs.gh-dash
+          pkgs.codex
         ];
       };
     };
@@ -75,6 +77,7 @@ Personal Nix derivations for bleeding-edge packages.
           nix-derivations.packages.${system}.devbox
           nix-derivations.packages.${system}.beads
           nix-derivations.packages.${system}.gh-dash
+          nix-derivations.packages.${system}.codex
         ];
       };
     };
@@ -129,6 +132,9 @@ nix run github:jzila/nix-derivations#beads
 
 # Run gh-dash
 nix run github:jzila/nix-derivations#gh-dash
+
+# Run codex
+nix run github:jzila/nix-derivations#codex
 ```
 
 ## Unfree Packages

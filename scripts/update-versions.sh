@@ -11,6 +11,12 @@ hex_to_sri() {
     nix hash convert --hash-algo sha256 --to sri "$1"
 }
 
+# Download a URL and print its SRI hash. For projects that don't publish a
+# checksums file, this is the only way to get the hash.
+sri_for_url() {
+    nix store prefetch-file --json --hash-type sha256 "$1" | jq -r '.hash'
+}
+
 update_nsc() {
     local version="${1:-}"
 
@@ -234,6 +240,42 @@ update_claude_code() {
     echo "Updated claude-code to $version"
 }
 
+update_codex() {
+    local version="${1:-}"
+
+    if [[ -z "$version" ]]; then
+        echo "Fetching latest codex version..."
+        version=$(curl -sL https://api.github.com/repos/openai/codex/releases/latest | jq -r '.tag_name' | sed 's/^rust-v//')
+    fi
+
+    echo "Updating codex to $version..."
+
+    local base="https://github.com/openai/codex/releases/download/rust-v${version}"
+
+    local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
+    x86_64_linux=$(sri_for_url "$base/codex-x86_64-unknown-linux-musl.tar.gz")
+    aarch64_linux=$(sri_for_url "$base/codex-aarch64-unknown-linux-musl.tar.gz")
+    x86_64_darwin=$(sri_for_url "$base/codex-x86_64-apple-darwin.tar.gz")
+    aarch64_darwin=$(sri_for_url "$base/codex-aarch64-apple-darwin.tar.gz")
+
+    local tmp
+    tmp=$(mktemp)
+    jq --arg ver "$version" \
+       --arg h1 "$x86_64_linux" \
+       --arg h2 "$aarch64_linux" \
+       --arg h3 "$x86_64_darwin" \
+       --arg h4 "$aarch64_darwin" \
+       '.codex.version = $ver |
+        .codex.hashes["x86_64-linux"] = $h1 |
+        .codex.hashes["aarch64-linux"] = $h2 |
+        .codex.hashes["x86_64-darwin"] = $h3 |
+        .codex.hashes["aarch64-darwin"] = $h4' \
+       "$VERSIONS_FILE" > "$tmp"
+    mv "$tmp" "$VERSIONS_FILE"
+
+    echo "Updated codex to $version"
+}
+
 usage() {
     cat <<EOF
 Update versions.json with latest versions and hashes for pinned packages.
@@ -247,6 +289,7 @@ Commands:
   gh-dash [version]     Update gh-dash (omit version for latest)
   signoz-mcp-server [version]  Update signoz-mcp-server (omit version for latest)
   claude-code [version]  Update claude-code (omit version for latest)
+  codex [version]        Update codex (omit version for latest)
   all                    Update all packages to latest
 
 Examples:
@@ -262,6 +305,8 @@ Examples:
   $0 signoz-mcp-server 0.0.5  # Pin signoz-mcp-server to specific version
   $0 claude-code        # Update claude-code to latest
   $0 claude-code 2.2.0  # Pin claude-code to specific version
+  $0 codex              # Update codex to latest
+  $0 codex 0.146.0      # Pin codex to specific version
   $0 all                # Update all to latest
 EOF
 }
@@ -285,6 +330,9 @@ case "${1:-}" in
     claude-code)
         update_claude_code "${2:-}"
         ;;
+    codex)
+        update_codex "${2:-}"
+        ;;
     all)
         update_nsc "${2:-}"
         update_devbox "${3:-}"
@@ -292,6 +340,7 @@ case "${1:-}" in
         update_gh_dash "${5:-}"
         update_signoz_mcp_server "${6:-}"
         update_claude_code "${7:-}"
+        update_codex "${8:-}"
         ;;
     -h|--help)
         usage
