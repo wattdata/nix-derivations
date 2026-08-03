@@ -59,6 +59,16 @@
       "aarch64-darwin": "sha256-UDqjvn7DBk841727AO/Mje3lqJjWHK1yKMO9IVN0Eh4="
     }
   },
+  "codex": {
+    "version": "0.146.0",
+    "repo": "openai/codex",
+    "hashes": {
+      "x86_64-linux": "sha256-W6O5QFVDlTCB9mHQhU0mb3biq75R1BNJNVo23nZzd2o=",
+      "aarch64-linux": "sha256-l1uskVYqvu3rj3ljbVGoZkmzHzSp3mo7ywWVZbbPH4c=",
+      "x86_64-darwin": "sha256-cQ1yew+itKshiesb3Fq0AXfBaClq8mSRPrerPOhI0Es=",
+      "aarch64-darwin": "sha256-J1ATLTAOZPHb/7lePZE/2cnceBK8jhvOXGE1cki3kp4="
+    }
+  },
   "claude-code": {
     "version": "2.1.220",
     "hashes": {

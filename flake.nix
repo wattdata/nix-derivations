@@ -54,6 +54,10 @@
             inherit (versions.claude-code) version hashes;
           };
 
+          codex = pkgs.callPackage ./pkgs/codex {
+            inherit (versions.codex) version hashes;
+          };
+
           default = self.packages.${system}.claude-code;
         };
       }
@@ -80,6 +84,9 @@
         };
         claude-code = prev.callPackage ./pkgs/claude-code {
           inherit (versions.claude-code) version hashes;
+        };
+        codex = prev.callPackage ./pkgs/codex {
+          inherit (versions.codex) version hashes;
         };
       };
     };

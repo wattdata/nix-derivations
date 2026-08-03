@@ -46,3 +46,8 @@ jobs:
           ./result/bin/claude -v
         env:
           NIXPKGS_ALLOW_UNFREE: 1
+
+      - name: Build and test codex
+        run: |
+          nix build .#codex --print-build-logs
+          ./result/bin/codex --version
