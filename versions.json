@@ -1,22 +1,22 @@
 {
   "nsc": {
-    "version": "0.0.551",
+    "version": "0.0.552",
     "repo": "namespacelabs/foundation",
     "hashes": {
-      "x86_64-linux": "sha256-2Ip69WLe+VgbF2E74r4A4ZFfygMfiV+SMqgtGs87b7I=",
-      "aarch64-linux": "sha256-0+KpniE+7nQsFip1Tg5Z42xjAOlhPpdfmwEhQh5Ep4c=",
-      "x86_64-darwin": "sha256-tpv81Cu1/7b2vq4Tiw4Z7pqCI3SCCiEKRRgJ2rEcX+g=",
-      "aarch64-darwin": "sha256-x3FYe8DT+5U4D506ioSUfmiT5unG6CGMiGf4r/9jPpc="
+      "x86_64-linux": "sha256-hu/xvKqx1VAuG/guEEF0BKp4NRHS7oJVRaoQk9X+/yo=",
+      "aarch64-linux": "sha256-udURCbNekycnF74eMou4rYFiCyWx+LXkqtcq7dSD7zI=",
+      "x86_64-darwin": "sha256-omrRNKdfM+yXQ64xRj/h49FmxvC7RWtMhVqOndZaioM=",
+      "aarch64-darwin": "sha256-ZUQV2iNl/6JpkTKgckHW+OBVH+pbrpvfOL2L8m5DzT8="
     }
   },
   "devbox": {
-    "version": "0.0.174",
+    "version": "0.0.175",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-jfScqO/WjWp7GCB7+cZYzURFtW8nxCgm4dIW4RiUKpM=",
-      "aarch64-linux": "sha256-6+XxUvZiOS+k8pu3w8mjA21045i7jngyUSSwmL/+Isw=",
-      "x86_64-darwin": "sha256-iIHOQh7M5opdACw3sx1ayYp8J3IS5PpqOvvOOO1DqEY=",
-      "aarch64-darwin": "sha256-lH+PUERVSQLhWSi8qszVE0cCg3J43xILhwq/vWIQiDk="
+      "x86_64-linux": "sha256-1O6J9JJWMSa+GTcSUCtBcq3hcVvnrwePFreaAKEgu+0=",
+      "aarch64-linux": "sha256-5/U2TCEZcqlhLWth065N8gzIgsUlyJ4JDr+ZIwCKf84=",
+      "x86_64-darwin": "sha256-2bZOLeywxYXo0AWTKWIl/6xHX0fAQMot2SDsmMvLH/Q=",
+      "aarch64-darwin": "sha256-uNgVsltL4+/oOhafBAN0SJhgTzTWvXncRD6yHrjusqc="
     }
   },
   "beads": {
@@ -70,12 +70,12 @@
     }
   },
   "claude-code": {
-    "version": "2.1.220",
+    "version": "2.1.221",
     "hashes": {
-      "x86_64-linux": "sha256-Z09h8g/zBvMQDPkgDkw2xLcCeLW+8ohFSYGblCqJyGM=",
-      "aarch64-linux": "sha256-FZ5KUdeW878UZ3V3EA9++4RWEbHOrwwwy9jUZQ2UIYU=",
-      "x86_64-darwin": "sha256-3Ke+CqfT2SSDbUQODG2OPUfvPI5h+lgJtUuQFxcM4vM=",
-      "aarch64-darwin": "sha256-it3IV/P+ZNWgNor57lAyG1CvtKaRi6PvAYq4T1274IE="
+      "x86_64-linux": "sha256-YNuOiNQsJLUZnJLP1W7Ig3DFEMN4nG82SvdINU8Ieto=",
+      "aarch64-linux": "sha256-08Wda8xK3PTNhavKO8E/oRMaNMsy+YK98DDYOjsR5wA=",
+      "x86_64-darwin": "sha256-9Ai59+RkOfbjSjaH/2dDP8a8GJ9AIgzk8KHoKeWPClI=",
+      "aarch64-darwin": "sha256-ehgfNu0PxPusbO5OzythXv+T2LQ0Ih//XXyHjcXr84A="
     }
   }
 }
