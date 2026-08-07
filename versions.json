@@ -60,22 +60,22 @@
     }
   },
   "codex": {
-    "version": "0.146.1",
+    "version": "0.147.0",
     "repo": "openai/codex",
     "hashes": {
-      "x86_64-linux": "sha256-9VgQWuwSv2+zNXB5Ot/Aifi0HcMqztYLi0+6m0UYJKw=",
-      "aarch64-linux": "sha256-Bd5l7ntr0CA45yDMMTlB1exnlHGOQmG9KP2DuT/jTUM=",
-      "x86_64-darwin": "sha256-l19uwiZZWV8W/tTlMcAyUcA7wP1ctUkNZv1VP00vH1A=",
-      "aarch64-darwin": "sha256-M3xesnDSS9VWxGrXgU22LCRksesKJTEGvJhnjb14GCE="
+      "x86_64-linux": "sha256-Akbi53ODTgfw+1JJ7W660S5FkeYI+Me7l91qlpBUTDY=",
+      "aarch64-linux": "sha256-62d8gPZmsauLSx0IO2bo1hSxKB2WC7b5/Yypj1izi5A=",
+      "x86_64-darwin": "sha256-NueC9x2BZMw3wricZJSPIYDpovhFayfmYNp1vGtVdOI=",
+      "aarch64-darwin": "sha256-dZhLgfkqcbDA9LO1ytgOXFcXfk2Mi0seE9twOyDcQ1g="
     }
   },
   "claude-code": {
-    "version": "2.1.223",
+    "version": "2.1.224",
     "hashes": {
-      "x86_64-linux": "sha256-mCJkdPgC4wlNaobFreiIPBYgbQ/LXEALdAHIAAY+mdc=",
-      "aarch64-linux": "sha256-YOg9jbDolNDlRBPl59qiVtGA22YPUeE5pRthT8MM86w=",
-      "x86_64-darwin": "sha256-NQ5ldCim00989x9nOMXrtqGVLMsS/BdH9kKX4GWxhG8=",
-      "aarch64-darwin": "sha256-/L4LjUdXDFATAt0a0xzCasKBDwIsRfolOTamlh3uMr8="
+      "x86_64-linux": "sha256-orWt19xLzY6qAp9Oi9rE33dptAc2mNt5idIGuvlBnC0=",
+      "aarch64-linux": "sha256-PlCDbiJ4aHRic2U+D4EVz1/JyzSggYR8YEDIHYCBLDM=",
+      "x86_64-darwin": "sha256-euF6dopycMe9bFSEWHw8ZQ3/QltL7usDrdwfKkp9cCo=",
+      "aarch64-darwin": "sha256-OR350qsE5M8yGZM1cgrHcVpYLpHq7P1NIZihb1fqWbM="
     }
   }
 }
