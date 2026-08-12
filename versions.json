@@ -20,13 +20,13 @@
     }
   },
   "beads": {
-    "version": "1.1.2",
+    "version": "1.2.1",
     "repo": "gastownhall/beads",
     "hashes": {
-      "x86_64-linux": "sha256-py1x7TdJVdyfg6D5C1S9e2oAFnCd0Wdq4uNoZR7UAcI=",
-      "aarch64-linux": "sha256-oTQBX69L4KQ/hoGo1gLq8LfCVclX8J08kzJXyMkv3RA=",
-      "x86_64-darwin": "sha256-DpTekxnJ1my34AOLsX669d0v5mnjZqS5FTUotHShqPY=",
-      "aarch64-darwin": "sha256-mwE3qDoq/TQ+Kr0qUGvnLqAychAA92Zpws+Bcp54UB0="
+      "x86_64-linux": "sha256-SK7PQv/e+mRwKY2AIt7rdi4wyHKdwKS92pOIjAsDVOI=",
+      "aarch64-linux": "sha256-UHw10PvzgrWsZIJDhkYKgISdcwZNP1CyPrJH6rtox6g=",
+      "x86_64-darwin": "sha256-XHLGdzQzy0BUBEEXbY8umDAoxOSmVuslyHnIAI0hysM=",
+      "aarch64-darwin": "sha256-1x6im1xYeeoO+Sfv/7Jmz+33unXU5Ntmidr/7DaXWVo="
     }
   },
   "gh-dash": {
@@ -70,12 +70,12 @@
     }
   },
   "claude-code": {
-    "version": "2.1.227",
+    "version": "2.1.228",
     "hashes": {
-      "x86_64-linux": "sha256-aDLcPxeXuJC3ERbl8tu/moP9PQSYwjW0sPnNDm5JmtY=",
-      "aarch64-linux": "sha256-20czVTLLyrZ6SzqxbY8/d5dr+F1Tx9efgpZTiqIr/OY=",
-      "x86_64-darwin": "sha256-FEhPuaBIC2tjgjBoWn2aJIpTObOEoWLg3xJ+SkoHJJs=",
-      "aarch64-darwin": "sha256-dDJRG6O+gY4B8j9u74Yw0hSothhFHhiMPH1hqYfu9sc="
+      "x86_64-linux": "sha256-1TWYXmlBo+sAF5zNf1LOsMZiOgMFpRjrxOZRT4SpTJk=",
+      "aarch64-linux": "sha256-JmQAYhlJe/cCGsQxVlGc1C7aZM6ypm9DTsq4Pngx+UI=",
+      "x86_64-darwin": "sha256-eFLxrg77ZNRtd6V9iFLa3cSm/7WK7aYme9PzQorcCbM=",
+      "aarch64-darwin": "sha256-Q0hLE1LO8DoING827wQ3dVsarWRquTE84YeFe3lLckc="
     }
   }
 }
