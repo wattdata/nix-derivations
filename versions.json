@@ -67,6 +67,12 @@
       "aarch64-linux": "sha256-62d8gPZmsauLSx0IO2bo1hSxKB2WC7b5/Yypj1izi5A=",
       "x86_64-darwin": "sha256-NueC9x2BZMw3wricZJSPIYDpovhFayfmYNp1vGtVdOI=",
       "aarch64-darwin": "sha256-dZhLgfkqcbDA9LO1ytgOXFcXfk2Mi0seE9twOyDcQ1g="
+    },
+    "codeModeHostHashes": {
+      "x86_64-linux": "sha256-AUat+qyDY+yfzbWJX3Yk21suhheig4h5OLf7l6HdQ1Y=",
+      "aarch64-linux": "sha256-39T/mOpNsw7QeK+cMbb4bj2kg20Fc6qH4iXlpbVNPHw=",
+      "x86_64-darwin": "sha256-cTGgUI3k3qYPecgWGIsLBrF/btQX2bOhhlsKSSf7xIo=",
+      "aarch64-darwin": "sha256-Vs2/YYe/kUEI07f+7qWjT/uhXlwWK+3OaeBi7pLd+14="
     }
   },
   "claude-code": {
