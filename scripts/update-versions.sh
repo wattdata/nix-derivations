@@ -128,6 +128,41 @@ update_beads() {
     echo "Updated beads to $version"
 }
 
+update_roborev() {
+    local version="${1:-}"
+
+    if [[ -z "$version" ]]; then
+        echo "Fetching latest roborev version..."
+        version=$(curl -sL https://api.github.com/repos/kenn-io/roborev/releases/latest | jq -r '.tag_name' | sed 's/^v//')
+    fi
+
+    echo "Updating roborev to $version..."
+
+    local base="https://github.com/kenn-io/roborev/releases/download/v${version}"
+    local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
+    x86_64_linux=$(sri_for_url "$base/roborev_${version}_linux_amd64.tar.gz")
+    aarch64_linux=$(sri_for_url "$base/roborev_${version}_linux_arm64.tar.gz")
+    x86_64_darwin=$(sri_for_url "$base/roborev_${version}_darwin_amd64.tar.gz")
+    aarch64_darwin=$(sri_for_url "$base/roborev_${version}_darwin_arm64.tar.gz")
+
+    local tmp
+    tmp=$(mktemp)
+    jq --arg ver "$version" \
+       --arg h1 "$x86_64_linux" \
+       --arg h2 "$aarch64_linux" \
+       --arg h3 "$x86_64_darwin" \
+       --arg h4 "$aarch64_darwin" \
+       '.roborev.version = $ver |
+        .roborev.hashes["x86_64-linux"] = $h1 |
+        .roborev.hashes["aarch64-linux"] = $h2 |
+        .roborev.hashes["x86_64-darwin"] = $h3 |
+        .roborev.hashes["aarch64-darwin"] = $h4' \
+       "$VERSIONS_FILE" > "$tmp"
+    mv "$tmp" "$VERSIONS_FILE"
+
+    echo "Updated roborev to $version"
+}
+
 update_gh_dash() {
     local version="${1:-}"
 
@@ -301,6 +336,7 @@ Commands:
   nsc [version]          Update nsc (omit version for latest)
   devbox [version]       Update devbox (omit version for latest)
   beads [version]        Update beads (omit version for latest)
+  roborev [version]      Update roborev (omit version for latest)
   gh-dash [version]     Update gh-dash (omit version for latest)
   signoz-mcp-server [version]  Update signoz-mcp-server (omit version for latest)
   claude-code [version]  Update claude-code (omit version for latest)
@@ -314,6 +350,8 @@ Examples:
   $0 devbox 0.0.116     # Pin devbox to specific version
   $0 beads              # Update beads to latest
   $0 beads 0.50.0       # Pin beads to specific version
+  $0 roborev            # Update roborev to latest
+  $0 roborev 0.64.0     # Pin roborev to specific version
   $0 gh-dash            # Update gh-dash to latest
   $0 gh-dash 4.23.2     # Pin gh-dash to specific version
   $0 signoz-mcp-server  # Update signoz-mcp-server to latest
@@ -336,6 +374,9 @@ case "${1:-}" in
     beads)
         update_beads "${2:-}"
         ;;
+    roborev)
+        update_roborev "${2:-}"
+        ;;
     gh-dash)
         update_gh_dash "${2:-}"
         ;;
@@ -356,6 +397,7 @@ case "${1:-}" in
         update_signoz_mcp_server "${6:-}"
         update_claude_code "${7:-}"
         update_codex "${8:-}"
+        update_roborev "${9:-}"
         ;;
     -h|--help)
         usage

@@ -119,6 +119,12 @@ jobs:
           nix build .#beads --print-build-logs
           ./result/bin/bd --version
 
+      - name: Build and test roborev
+        run: |
+          bash tests/roborev-package.sh
+          nix build .#roborev --print-build-logs
+          ./result/bin/roborev version
+
       - name: Build and test claude-code
         run: |
           nix build .#claude-code --print-build-logs --impure

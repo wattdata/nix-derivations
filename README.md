@@ -10,6 +10,7 @@ Personal Nix derivations for bleeding-edge packages.
 | `nsc` | Namespace CLI - command line interface for Namespace |
 | `devbox` | Namespace devbox - portable development environments |
 | `beads` | Distributed, git-backed graph issue tracker for AI coding agents |
+| `roborev` | Continuous code review for AI coding agents |
 | `gh-dash` | A beautiful CLI dashboard for GitHub |
 | `codex` | OpenAI Codex CLI - coding agent that runs in the terminal |
 
@@ -48,6 +49,7 @@ Personal Nix derivations for bleeding-edge packages.
           pkgs.nsc
           pkgs.devbox
           pkgs.beads
+          pkgs.roborev
           pkgs.gh-dash
           pkgs.codex
         ];
@@ -76,6 +78,7 @@ Personal Nix derivations for bleeding-edge packages.
           nix-derivations.packages.${system}.nsc
           nix-derivations.packages.${system}.devbox
           nix-derivations.packages.${system}.beads
+          nix-derivations.packages.${system}.roborev
           nix-derivations.packages.${system}.gh-dash
           nix-derivations.packages.${system}.codex
         ];
@@ -111,6 +114,7 @@ allowUnfree: true  # Required for claude-code
     pkgs.nsc
     pkgs.devbox
     pkgs.beads
+    pkgs.roborev
   ];
 }
 ```
@@ -129,6 +133,9 @@ nix run github:jzila/nix-derivations#devbox
 
 # Run beads
 nix run github:jzila/nix-derivations#beads
+
+# Run roborev
+nix run github:jzila/nix-derivations#roborev
 
 # Run gh-dash
 nix run github:jzila/nix-derivations#gh-dash

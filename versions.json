@@ -29,6 +29,16 @@
       "aarch64-darwin": "sha256-1x6im1xYeeoO+Sfv/7Jmz+33unXU5Ntmidr/7DaXWVo="
     }
   },
+  "roborev": {
+    "version": "0.64.0",
+    "repo": "kenn-io/roborev",
+    "hashes": {
+      "x86_64-linux": "sha256-6X6iuP2d/XpYD3McqEeqFwpfqVOHcnt60taHW3O5Auc=",
+      "aarch64-linux": "sha256-QpqYbRFA1JEGgD6V0RZG6bMu/AU+5YtluvMOHgoPRy0=",
+      "x86_64-darwin": "sha256-Sb3KsEmYQiDOvqmNOt5Dybx/eat6p9VBei0vaZX3Jxc=",
+      "aarch64-darwin": "sha256-2Vs031/Xwbgu9VF2pUn3WtI5T20CJy1C9H/dyiul/xk="
+    }
+  },
   "gh-dash": {
     "version": "4.25.2",
     "repo": "dlvhdr/gh-dash",

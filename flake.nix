@@ -38,6 +38,10 @@
             inherit (versions.beads) version hashes;
           };
 
+          roborev = pkgs.callPackage ./pkgs/roborev {
+            inherit (versions.roborev) version hashes;
+          };
+
           gh-dash = pkgs.callPackage ./pkgs/gh-dash {
             inherit (versions.gh-dash) version hashes;
           };
@@ -72,6 +76,9 @@
         };
         beads = prev.callPackage ./pkgs/beads {
           inherit (versions.beads) version hashes;
+        };
+        roborev = prev.callPackage ./pkgs/roborev {
+          inherit (versions.roborev) version hashes;
         };
         gh-dash = prev.callPackage ./pkgs/gh-dash {
           inherit (versions.gh-dash) version hashes;
