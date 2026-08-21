@@ -35,8 +35,8 @@
     "hashes": {
       "x86_64-linux": "sha256-trSf3SVdPlvaoJxzFD+VR8PezHW6deCewqfcgvnak14=",
       "aarch64-linux": "sha256-anPUvSdbgda6b6AzqKGqNWnV7yViLC8PdFBQXmGLdDo=",
-      "x86_64-darwin": "sha256-uwSjY8vJ2sHZln7+Yfvi2n9XyfsuzT7unO1ghiMweJ8=",
-      "aarch64-darwin": "sha256-/UHgolUTdOK7r+0NSCehGiDhTy8SWvK52LRKUhHiCuA="
+      "x86_64-darwin": "sha256-9yEfdQCy2LkhLN9poqegKQgD1M0xFgcSQgQc03vvZts=",
+      "aarch64-darwin": "sha256-2OV0fHliHjcomGC+xH0Qet5+dKG9jhg+Jdg/oXij5c8="
     }
   },
   "gh-dash": {
@@ -70,28 +70,28 @@
     }
   },
   "codex": {
-    "version": "0.148.0",
+    "version": "0.149.0",
     "repo": "openai/codex",
     "hashes": {
-      "x86_64-linux": "sha256-Gjb3YvazvvUzu4Y0WtlRdmHC2E1TmWolDPLKidLP7lo=",
-      "aarch64-linux": "sha256-QQxq4Mdj6znG2hdmXmP5qkqY5u5mPYH46Ld5yXyxdaw=",
-      "x86_64-darwin": "sha256-VFkXcvJCJx+ALxe03abOyrKSKbpxWT6WLiCFSeDaGjo=",
-      "aarch64-darwin": "sha256-dYkWqjjvp60HagUIMPy+8aftb0Hvrpwczq7vY+Qo/Cs="
+      "x86_64-linux": "sha256-c2iyBV7QIVf+omlbufWvPuew5AxaO+vIHfxZZwQkTP0=",
+      "aarch64-linux": "sha256-HMPrTC+6sEjIr64L67HlR0X4jZHlJJpEh2XTSiorqbs=",
+      "x86_64-darwin": "sha256-x4p1/6R1WyH9ngX7GxBjYOMbS6Vu8IPABQgRiAtCDmU=",
+      "aarch64-darwin": "sha256-DO9Plimve2vMS03irbYzN9HnegCoEeZigdpTVuPnT8Y="
     },
     "codeModeHostHashes": {
-      "x86_64-linux": "sha256-jm5VmyKPphsY+ywowx7AIGh1ECW8zj8Az2PHlJnVmCk=",
-      "aarch64-linux": "sha256-HEEP5LsXSUlknv4FwVCxUS+0d11YdOtUsu22JM91E6Q=",
-      "x86_64-darwin": "sha256-oq1cboZUxgtjrtFyyw42zQ3q1WPPKgrsiM3LWvSE2lA=",
-      "aarch64-darwin": "sha256-EOr1Yuzv7hufF/tgnNjzK28Bh2Z0VVq9LduBli87XjQ="
+      "x86_64-linux": "sha256-NgCkWsKwn+PJlfT0mGATH+o4i0bECcgqAmb8TQNCoEw=",
+      "aarch64-linux": "sha256-q/SpowjSxC5vuwSndwSsUJyCzqWqB5hINlvj+2VHSyI=",
+      "x86_64-darwin": "sha256-HpyGlfzSgNHqA5xmK9D2OTogKnxYP/6cyX0TXgddYf0=",
+      "aarch64-darwin": "sha256-7WpqCJxQ5yfvHwZC7nwGEbphHXbXICkxagUTvpG/skQ="
     }
   },
   "claude-code": {
-    "version": "2.1.237",
+    "version": "2.1.238",
     "hashes": {
-      "x86_64-linux": "sha256-c5dRZ/AQhpPPb9ZhSZR4FlfruEVuvvXSR0WHNKv7ORY=",
-      "aarch64-linux": "sha256-pwHPtrtHA6vG885HUIyHjKgVjr2+rNXDXH1RDHvHAXc=",
-      "x86_64-darwin": "sha256-nwB4l1SnuV/rxtTjejtlI9TZxMIzOizkvVlq2CGGIk4=",
-      "aarch64-darwin": "sha256-M4kBNR1P8XSVc4xn/D4SoywbUGc4rF4BLreC09i1vkM="
+      "x86_64-linux": "sha256-CTOyhs+U4bJQSzWsFlq3a4+CJzXVM3HFY5OYjCMEDVg=",
+      "aarch64-linux": "sha256-KNc2EgprFMXq4a0UcOczcYGMnC+kHgs8cEAgeqLU7e4=",
+      "x86_64-darwin": "sha256-0QvHuxcgQ1+IMKo+50CF8JNI0rGioVK97iUbdw12zHM=",
+      "aarch64-darwin": "sha256-HBlsRWNztXgYroffhK7O6Wy2WUSMDWpru0AaxXWEMbI="
     }
   }
 }
