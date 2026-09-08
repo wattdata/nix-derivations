@@ -1,22 +1,22 @@
 {
   "nsc": {
-    "version": "0.0.564",
+    "version": "0.0.565",
     "repo": "namespacelabs/foundation",
     "hashes": {
-      "x86_64-linux": "sha256-OghSSo71ftou32OloXsFba8DiyHaqOxAqu8DaNkhVEQ=",
-      "aarch64-linux": "sha256-BFPXwNyRrti7bZBCYyB/Qvacn9XmbVTyVP3i7ilB1kw=",
-      "x86_64-darwin": "sha256-Snt9GlaPWEI/igvG8QCG/EAAXUNCvXMtB8TL4CCAh2E=",
-      "aarch64-darwin": "sha256-PnqBuyaJvkWbK6xOf9Ugn4S8cN5Tw/JGdPjMneuIxMg="
+      "x86_64-linux": "sha256-r9WPRBSNbgPopus32fFQLUS+l5FkyVvIs9fd8Il+/TM=",
+      "aarch64-linux": "sha256-gvNltzOjnzxWPUfztIchSG1t2w/5FykXHe2jK0JhGTk=",
+      "x86_64-darwin": "sha256-2TqN/naSkfRCcYsPyYt0K6yn6XhwaifeXTBL5y9CxyE=",
+      "aarch64-darwin": "sha256-i8Vj/4y6K3+JpgnJaAobvUJyjcSQDBquw7AmFASMuck="
     }
   },
   "devbox": {
-    "version": "0.0.183",
+    "version": "0.0.184",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-MJYfa4uUP9g3EsFMNFBChKait70xci5NY4GpNeWq2CE=",
-      "aarch64-linux": "sha256-9CWFxBzYM2+qyTL3l/TMnATR2Xlr24bYbdQ6xr1IAOQ=",
-      "x86_64-darwin": "sha256-zVn4GCt1mjmtYxfX8a2sDUp/9c+0I3ctag8LjNWqsHs=",
-      "aarch64-darwin": "sha256-o41PTHtnTI1JC+8iJKIUHU6xt2XwsYbt0CwvB895qKc="
+      "x86_64-linux": "sha256-NK7Of7WTHGNzQkMcUyeZB6Zbl3cfaY4S/910JdNF2WU=",
+      "aarch64-linux": "sha256-IEvkzsxHsHdPBo2f2V51m/SYL4nr3gy4jGsM6xn0tQY=",
+      "x86_64-darwin": "sha256-qZ75Cu+k7Bkx7VHH0ilwOllsSALcYbhOw4o3VCdAl+g=",
+      "aarch64-darwin": "sha256-5OLJdbUBKOoUhDgEKHZlCq77qE19m1QSWm/a2q+mNIc="
     }
   },
   "beads": {
