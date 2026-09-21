@@ -30,13 +30,13 @@
     }
   },
   "roborev": {
-    "version": "0.67.0",
+    "version": "0.68.0",
     "repo": "kenn-io/roborev",
     "hashes": {
-      "x86_64-linux": "sha256-aLoixYaBO9VXl5c8sXYVf6NpNrAtstS+5Gu9SZv/u4c=",
-      "aarch64-linux": "sha256-71oT9IDs6cO/36BwJZumatg9crvUZkhPrFEsCvCkGgI=",
-      "x86_64-darwin": "sha256-sQ0U8fraIxY25edmKOCioBqFqPlqfwNSCJ5p+q2TW2c=",
-      "aarch64-darwin": "sha256-KOO4Trjg1vgaMGx8H3XJU5VMGS3i2ZpHqP5Gxu6TsJA="
+      "x86_64-linux": "sha256-NugAUeXhJiADSjKsqfZ9CeLWhHDOKRMmUVyUv6tfAhY=",
+      "aarch64-linux": "sha256-muPDu4tFRAaQi++cbzfB3ab/sB48bh0oBEMLB4yv1c0=",
+      "x86_64-darwin": "sha256-SWtPlTVPHRscmFIRrMUU+I85z+dU8gfJdtYwdnICsTM=",
+      "aarch64-darwin": "sha256-qR51BrYhFxWtkP16GKGf4z73k0LHJUl6Zv19YG+JLow="
     }
   },
   "gh-dash": {
