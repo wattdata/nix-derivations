@@ -31,10 +31,10 @@ update_nsc() {
     checksums=$(curl -sL "https://github.com/namespacelabs/foundation/releases/download/v${version}/checksums.txt")
 
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
-    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_amd64" | awk '{print $1}')")
-    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_arm64" | awk '{print $1}')")
-    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_amd64" | awk '{print $1}')")
-    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_arm64" | awk '{print $1}')")
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*linux_arm64.tar.gz$" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "nsc_.*darwin_arm64.tar.gz$" | awk '{print $1}')")
 
     local tmp
     tmp=$(mktemp)
@@ -68,10 +68,10 @@ update_devbox() {
     checksums=$(curl -sL "https://github.com/namespacelabs/devbox/releases/download/v${version}/checksums.txt")
 
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
-    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64" | awk '{print $1}')")
-    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64" | awk '{print $1}')")
-    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64" | awk '{print $1}')")
-    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64" | awk '{print $1}')")
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64.tar.gz$" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64.tar.gz$" | awk '{print $1}')")
 
     local tmp
     tmp=$(mktemp)
@@ -105,10 +105,10 @@ update_beads() {
     checksums=$(curl -sL "https://github.com/gastownhall/beads/releases/download/v${version}/checksums.txt")
 
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
-    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64" | awk '{print $1}')")
-    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64" | awk '{print $1}')")
-    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64" | awk '{print $1}')")
-    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64" | awk '{print $1}')")
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64.tar.gz$" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64.tar.gz$" | awk '{print $1}')")
 
     local tmp
     tmp=$(mktemp)
@@ -214,10 +214,10 @@ update_signoz_mcp_server() {
     checksums=$(curl -sL "https://github.com/SigNoz/signoz-mcp-server/releases/download/v${version}/signoz-mcp-server_${version}_checksums.txt")
 
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
-    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64" | awk '{print $1}')")
-    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64" | awk '{print $1}')")
-    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64" | awk '{print $1}')")
-    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64" | awk '{print $1}')")
+    x86_64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_linux=$(hex_to_sri "$(echo "$checksums" | grep "linux_arm64.tar.gz$" | awk '{print $1}')")
+    x86_64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_amd64.tar.gz$" | awk '{print $1}')")
+    aarch64_darwin=$(hex_to_sri "$(echo "$checksums" | grep "darwin_arm64.tar.gz$" | awk '{print $1}')")
 
     local tmp
     tmp=$(mktemp)
