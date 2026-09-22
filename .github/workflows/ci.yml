@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   pull_request:
+    # The daily update-versions PRs only touch versions.json and are opened by
+    # github-actions[bot], whose workflow runs sit waiting for maintainer
+    # approval until auto-merge closes the PR. Those PRs are already built and
+    # tested inline by update-versions.yml, so skip CI for them here.
+    paths-ignore:
+      - versions.json
   workflow_dispatch:
 
 jobs:
