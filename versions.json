@@ -30,13 +30,13 @@
     }
   },
   "roborev": {
-    "version": "0.68.0",
+    "version": "0.68.2",
     "repo": "kenn-io/roborev",
     "hashes": {
-      "x86_64-linux": "sha256-NugAUeXhJiADSjKsqfZ9CeLWhHDOKRMmUVyUv6tfAhY=",
-      "aarch64-linux": "sha256-muPDu4tFRAaQi++cbzfB3ab/sB48bh0oBEMLB4yv1c0=",
-      "x86_64-darwin": "sha256-SWtPlTVPHRscmFIRrMUU+I85z+dU8gfJdtYwdnICsTM=",
-      "aarch64-darwin": "sha256-qR51BrYhFxWtkP16GKGf4z73k0LHJUl6Zv19YG+JLow="
+      "x86_64-linux": "sha256-sPEjg446xEHc2QkaP8jb2EnBDYH5kX5JmZm1XlOvPaA=",
+      "aarch64-linux": "sha256-Ft6HgsgV0rJIwGQjPqa9kmTKud95PYgzsaCszNyPJG8=",
+      "x86_64-darwin": "sha256-ovumYtsrZPWSnW8SAugGX6Q89ja3nO6jC5tJ636jO+I=",
+      "aarch64-darwin": "sha256-D7obs9s0cyh3pjk7zFu+ZrLhbb/zYQM0JnDwXxQrHys="
     }
   },
   "gh-dash": {
@@ -70,19 +70,19 @@
     }
   },
   "codex": {
-    "version": "0.156.0",
+    "version": "0.156.1",
     "repo": "openai/codex",
     "hashes": {
-      "x86_64-linux": "sha256-PUnZryWlFoz8UeUOUgqyOLIwg8JZrnwU+JsAfLJUXHs=",
-      "aarch64-linux": "sha256-d9F6ZyYXp/03d8qdLt/9wMzRkJB4gb/z+0rtSyFKxaI=",
-      "x86_64-darwin": "sha256-kdE2M+SD1IPU5ld+EP0S0xNljMm8mIFswnDjS2XdHLI=",
-      "aarch64-darwin": "sha256-MNrg5VN2invFZM+cQtbmGdJOiVZevm0bxYnoWMogKsM="
+      "x86_64-linux": "sha256-r/RlOag6/4bjxixZK84sUNlTkfnfKJr68DpQwB0UUz0=",
+      "aarch64-linux": "sha256-VY4SqqbayzNexHJAv5ch24pUdGgG1k8BGFpAP0T3m3I=",
+      "x86_64-darwin": "sha256-VeNFht7lNyDdlEUQImMv/8njtVskcVrN2UU/01ZqVN8=",
+      "aarch64-darwin": "sha256-K9ZK8U3t1HeV8va/1dElz3kZmswse6IiFE4IEnERpco="
     },
     "codeModeHostHashes": {
-      "x86_64-linux": "sha256-g4PHmwtrT3fwGhylSP4dVQrZam6RufwRgLtppEnK5Ts=",
-      "aarch64-linux": "sha256-2CZaReIHs0H9XnImKOGZrFLdNUNaZ86j5eokZCD45rA=",
-      "x86_64-darwin": "sha256-EWapNPGx4ZBQzA84Ubu5RHrZrwmSuICDils3jaJZdWw=",
-      "aarch64-darwin": "sha256-d+R+nwCCBWay1uJb/MGJDBpusQqKCwoXjcwLNxJ3Oe4="
+      "x86_64-linux": "sha256-qSnaqfagvdwAwMnmQC3xF7ElrNlvnVVPbJnDLH5mxgg=",
+      "aarch64-linux": "sha256-QBmBOLA3mP+owNpMgnqMpYlndOoQS3EQwqLAx1YMvpQ=",
+      "x86_64-darwin": "sha256-/JaNnnIS1/ux4VRtKDbzsHxfOIEJwFuEKMHz8wkdcgk=",
+      "aarch64-darwin": "sha256-JiXQI+K24D0rzEN6Pg4IMcJdPHItKFRjio50kh/3m9k="
     }
   },
   "claude-code": {
