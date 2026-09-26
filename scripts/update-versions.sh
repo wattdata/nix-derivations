@@ -287,18 +287,13 @@ update_codex() {
 
     local base="https://github.com/openai/codex/releases/download/rust-v${version}"
 
+    # The package tarball carries codex-package.json, which the background
+    # server needs to install itself; the bare codex tarball does not.
     local x86_64_linux aarch64_linux x86_64_darwin aarch64_darwin
-    x86_64_linux=$(sri_for_url "$base/codex-x86_64-unknown-linux-musl.tar.gz")
-    aarch64_linux=$(sri_for_url "$base/codex-aarch64-unknown-linux-musl.tar.gz")
-    x86_64_darwin=$(sri_for_url "$base/codex-x86_64-apple-darwin.tar.gz")
-    aarch64_darwin=$(sri_for_url "$base/codex-aarch64-apple-darwin.tar.gz")
-
-    # Shipped as its own asset; codex expects it beside its own executable.
-    local cmh_x86_64_linux cmh_aarch64_linux cmh_x86_64_darwin cmh_aarch64_darwin
-    cmh_x86_64_linux=$(sri_for_url "$base/codex-code-mode-host-x86_64-unknown-linux-musl.tar.gz")
-    cmh_aarch64_linux=$(sri_for_url "$base/codex-code-mode-host-aarch64-unknown-linux-musl.tar.gz")
-    cmh_x86_64_darwin=$(sri_for_url "$base/codex-code-mode-host-x86_64-apple-darwin.tar.gz")
-    cmh_aarch64_darwin=$(sri_for_url "$base/codex-code-mode-host-aarch64-apple-darwin.tar.gz")
+    x86_64_linux=$(sri_for_url "$base/codex-package-x86_64-unknown-linux-musl.tar.gz")
+    aarch64_linux=$(sri_for_url "$base/codex-package-aarch64-unknown-linux-musl.tar.gz")
+    x86_64_darwin=$(sri_for_url "$base/codex-package-x86_64-apple-darwin.tar.gz")
+    aarch64_darwin=$(sri_for_url "$base/codex-package-aarch64-apple-darwin.tar.gz")
 
     local tmp
     tmp=$(mktemp)
@@ -307,19 +302,11 @@ update_codex() {
        --arg h2 "$aarch64_linux" \
        --arg h3 "$x86_64_darwin" \
        --arg h4 "$aarch64_darwin" \
-       --arg c1 "$cmh_x86_64_linux" \
-       --arg c2 "$cmh_aarch64_linux" \
-       --arg c3 "$cmh_x86_64_darwin" \
-       --arg c4 "$cmh_aarch64_darwin" \
        '.codex.version = $ver |
         .codex.hashes["x86_64-linux"] = $h1 |
         .codex.hashes["aarch64-linux"] = $h2 |
         .codex.hashes["x86_64-darwin"] = $h3 |
-        .codex.hashes["aarch64-darwin"] = $h4 |
-        .codex.codeModeHostHashes["x86_64-linux"] = $c1 |
-        .codex.codeModeHostHashes["aarch64-linux"] = $c2 |
-        .codex.codeModeHostHashes["x86_64-darwin"] = $c3 |
-        .codex.codeModeHostHashes["aarch64-darwin"] = $c4' \
+        .codex.hashes["aarch64-darwin"] = $h4' \
        "$VERSIONS_FILE" > "$tmp"
     mv "$tmp" "$VERSIONS_FILE"
 

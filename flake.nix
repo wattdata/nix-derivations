@@ -59,7 +59,7 @@
           };
 
           codex = pkgs.callPackage ./pkgs/codex {
-            inherit (versions.codex) version hashes codeModeHostHashes;
+            inherit (versions.codex) version hashes;
           };
 
           default = self.packages.${system}.claude-code;
@@ -93,7 +93,7 @@
           inherit (versions.claude-code) version hashes;
         };
         codex = prev.callPackage ./pkgs/codex {
-          inherit (versions.codex) version hashes codeModeHostHashes;
+          inherit (versions.codex) version hashes;
         };
       };
     };
