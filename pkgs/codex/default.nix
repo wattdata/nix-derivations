@@ -2,7 +2,6 @@
 , stdenvNoCC
 , version
 , hashes
-, codeModeHostHashes
 , fetchurl
 }:
 
@@ -17,33 +16,34 @@ let
   target = platformMap.${stdenvNoCC.hostPlatform.system}
     or (throw "Unsupported platform: ${stdenvNoCC.hostPlatform.system}");
 
-  baseUrl = "https://github.com/openai/codex/releases/download/rust-v${version}";
-
 in stdenvNoCC.mkDerivation rec {
   pname = "codex";
   inherit version;
 
-  # The code-mode host is a separate release asset. Codex resolves it as a
-  # sibling of its own executable, so both have to land in the same bin dir.
-  srcs = [
-    (fetchurl {
-      url = "${baseUrl}/codex-${target}.tar.gz";
-      sha256 = hashes.${stdenvNoCC.hostPlatform.system};
-    })
-    (fetchurl {
-      url = "${baseUrl}/codex-code-mode-host-${target}.tar.gz";
-      sha256 = codeModeHostHashes.${stdenvNoCC.hostPlatform.system};
-    })
-  ];
+  # The package tarball, unlike the bare codex one, carries codex-package.json,
+  # codex-code-mode-host, and codex-resources. Codex canonicalizes its own path
+  # and reads the manifest from the parent of bin/, and its background server
+  # refuses to start without it, so the layout has to land in $out unchanged.
+  src = fetchurl {
+    url = "https://github.com/openai/codex/releases/download/rust-v${version}/codex-package-${target}.tar.gz";
+    sha256 = hashes.${stdenvNoCC.hostPlatform.system};
+  };
 
-  # Tarballs hold a single binary named after the target triple, no leading directory.
-  sourceRoot = ".";
+  # No leading directory in the tarball, so give it one to keep build files
+  # out of $out.
+  unpackPhase = ''
+    runHook preUnpack
+    mkdir package
+    tar -xzf $src -C package
+    runHook postUnpack
+  '';
+  sourceRoot = "package";
 
   # The Linux builds are static-pie musl, so there is nothing to patch.
   installPhase = ''
     runHook preInstall
-    install -Dm755 codex-${target} $out/bin/codex
-    install -Dm755 codex-code-mode-host-${target} $out/bin/codex-code-mode-host
+    mkdir -p $out
+    cp -R . $out/
     runHook postInstall
   '';
 

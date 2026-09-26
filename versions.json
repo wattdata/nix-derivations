@@ -73,16 +73,10 @@
     "version": "0.157.0",
     "repo": "openai/codex",
     "hashes": {
-      "x86_64-linux": "sha256-2z/jrao1xQ7ftoqYihF3gv40kpYPtj1wA+tnSMzAZXs=",
-      "aarch64-linux": "sha256-5vvieY6UG4M/fjvDQBD3RDJArEoUnOGHbzLL+gun0l8=",
-      "x86_64-darwin": "sha256-u/jMgfiN84oz3zGxE2L/4D5WrxuniWMHPsyCIlCYy3M=",
-      "aarch64-darwin": "sha256-DxUiNiv4yLu1i/L6ijxgCgtyPx1ONAWrgxr+2jJDiQk="
-    },
-    "codeModeHostHashes": {
-      "x86_64-linux": "sha256-R9MkGeiVyc3btmSiiQv7JQ7w4/3tPacOXyvGFHnxmJw=",
-      "aarch64-linux": "sha256-OzE1gTXha/gJDvywQExEgHxRKk/YI4feA6UqUe0FyRA=",
-      "x86_64-darwin": "sha256-jJve2OqXwOVrkSeWMtTCegTWc01WY/ZuAG0ksmDBJ1U=",
-      "aarch64-darwin": "sha256-pbM/9selATTQiF+78ZTK8c4nRbxXlGRFy2ZBZbBtI1c="
+      "x86_64-linux": "sha256-BC+FHqP8EIPEUVdSBSCUT8eQYytT68WA/JjqylWGKiU=",
+      "aarch64-linux": "sha256-wcNr6rC09yd5rfU7qenklL98v75PNQagj/Z6JPXwDQg=",
+      "x86_64-darwin": "sha256-UcyJ0yFFweXdSqlnC4j6y+uWe6FHBHBoCuhTdvPjQKA=",
+      "aarch64-darwin": "sha256-l4Cfkcs1XlVIDNehJvmtJLt7FiIiUV4wKGvKxvupSs0="
     }
   },
   "claude-code": {
