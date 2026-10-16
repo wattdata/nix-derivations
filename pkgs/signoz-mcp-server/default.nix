@@ -30,7 +30,7 @@ in stdenv.mkDerivation rec {
 
   sourceRoot = "signoz-mcp-server_${platform.suffix}";
 
-  nativeBuildInputs = lib.optionals stdenv.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   installPhase = ''
     runHook preInstall
