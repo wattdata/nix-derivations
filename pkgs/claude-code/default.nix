@@ -32,14 +32,14 @@ in stdenvNoCC.mkDerivation rec {
 
   dontUnpack = true;
 
-  nativeBuildInputs = [ makeWrapper ] ++ lib.optionals stdenvNoCC.isLinux [ patchelf ];
+  nativeBuildInputs = [ makeWrapper ] ++ lib.optionals stdenvNoCC.hostPlatform.isLinux [ patchelf ];
 
   # Bun binaries have JS appended after ELF - autoPatchelfHook corrupts this.
   # Only patch the interpreter, don't modify rpath or strip.
   installPhase = ''
     runHook preInstall
     install -Dm755 $src $out/bin/.claude-unwrapped
-  '' + lib.optionalString stdenvNoCC.isLinux ''
+  '' + lib.optionalString stdenvNoCC.hostPlatform.isLinux ''
     patchelf --set-interpreter "$(cat ${stdenv.cc}/nix-support/dynamic-linker)" $out/bin/.claude-unwrapped
   '' + ''
     makeWrapper $out/bin/.claude-unwrapped $out/bin/claude \
