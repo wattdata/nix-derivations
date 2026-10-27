@@ -30,13 +30,13 @@
     }
   },
   "roborev": {
-    "version": "0.73.0",
+    "version": "0.74.0",
     "repo": "kenn-io/roborev",
     "hashes": {
-      "x86_64-linux": "sha256-kEvH9I4h/Eni/CitLU0gnVwBX9TE8pni39ujAmGLt0o=",
-      "aarch64-linux": "sha256-JO/K0iWxCL/KqwnVNpHff7CkEfa414PhWaBKjt3Kbq4=",
-      "x86_64-darwin": "sha256-fS00dQLV0oQNtLoak/D/3LNnqaSghbAVg2P2KN0ETx8=",
-      "aarch64-darwin": "sha256-/eP9QtBsSPPPTDBlPFBgd9+uneVtMxtfibyWAqJr3PA="
+      "x86_64-linux": "sha256-n4tyt7tCsVcrEbb6UvWSVaaGLOcU2UW2TndvJMIZKoc=",
+      "aarch64-linux": "sha256-gzX48jSwVthJEsdAqo5ABYYCs7NRTL5//uWFVI2hpcQ=",
+      "x86_64-darwin": "sha256-yW+hc+RKOr8CFT7MbGizZX+teFX+h5h6Ngum1MYCDa0=",
+      "aarch64-darwin": "sha256-wrHOF964M3nfr525DszEiE49ke4QhzueRg6O5Y6LPuA="
     }
   },
   "gh-dash": {
@@ -80,12 +80,12 @@
     }
   },
   "claude-code": {
-    "version": "2.1.310",
+    "version": "2.1.311",
     "hashes": {
-      "x86_64-linux": "sha256-tzZ2QwrxL5cxanmLg3H4HWQPkKWL3LjzzlaoNbtH31Y=",
-      "aarch64-linux": "sha256-nGTZp0QkNrZfzXzALBqgBRu1pwQed4hXbtO18pxEfVQ=",
-      "x86_64-darwin": "sha256-KP2+1ahO99QgW1dRx/Ah55FRxOMZxKQB5I/mquhruzk=",
-      "aarch64-darwin": "sha256-/7ZDMbwO4bae+3wsQovTq1Frwxt1v2CIazVsl8HCX/0="
+      "x86_64-linux": "sha256-htwfzGlJgVnq8V9EZhPoRwEPkDa/u9/9TEk1C+hImto=",
+      "aarch64-linux": "sha256-LiSWyagGXfk6yw/KLTQfWaa4d3ZJsuAlq4ybzV7vYfM=",
+      "x86_64-darwin": "sha256-004cuCAVsFBHGpdXSqbqb2mOzzqXphyYCWH0Otn4OPU=",
+      "aarch64-darwin": "sha256-hdjAhwf8/R54/6AgTu+8bsnk/iLzdfsnZ++F2VftMWE="
     }
   }
 }
