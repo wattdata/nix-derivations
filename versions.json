@@ -10,23 +10,23 @@
     }
   },
   "devbox": {
-    "version": "0.0.208",
+    "version": "0.0.209",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-GU7x9SHK5HY79DUFoSXDgM/FxHPDSq64CS7q28fyX9I=",
-      "aarch64-linux": "sha256-15cFMsXTM/He/eEDCgAz8PPZFXg1iTrnW7z2d/JPRz8=",
-      "x86_64-darwin": "sha256-fQxZDjwvFJzYn3yc+U8n3FVMs7yDyZ52PyTe7ZhqegY=",
-      "aarch64-darwin": "sha256-NwQDkwa6e1RfTtJo1bl+JG+kYXgCr2yW4bGlT0SYI1k="
+      "x86_64-linux": "sha256-8nMHm0ENroB0cjguQBWBCN8WPsjAXehE8mqgAI4IUZ0=",
+      "aarch64-linux": "sha256-UE7QEokqgUG9RtTxmcuB6lZRsMc9+Gd3jJI0+rf9aeQ=",
+      "x86_64-darwin": "sha256-yhE7icWVBXc5Z/2Q8gJedjFv4ZFdEpoylcHOi5dphs0=",
+      "aarch64-darwin": "sha256-7xXR7t4YJWZ1Bh1smoGtvrZHNZw3XzDXgf2Ju9D+Rw8="
     }
   },
   "beads": {
-    "version": "1.3.3",
+    "version": "1.3.4",
     "repo": "gastownhall/beads",
     "hashes": {
-      "x86_64-linux": "sha256-EKeuv9UFScM8Q9GF44cLvYK0+QCypeMSk2nubisPsuU=",
-      "aarch64-linux": "sha256-fLrv+GHtX4szaulOTCI0I2Pfit4RP5X5UJiUDam9gIw=",
-      "x86_64-darwin": "sha256-ZQgI/I7++ZMd7Q/YPeSfFddYhhFjjhaYMJ2HFzr3lMo=",
-      "aarch64-darwin": "sha256-3/lP0ArpIf4/hNR1CEfkEmtYRLyGjCU8RbOR8RL/YKo="
+      "x86_64-linux": "sha256-F1wmkEveP/kWjSKC/2tW8XsX9gwi+lrLPazJ+zRlMDo=",
+      "aarch64-linux": "sha256-9O5us+x5uy1+udcXxz77y2+nY8xw9ya00FW3Kv3WitU=",
+      "x86_64-darwin": "sha256-BecTotqO6rpAuSQYRzXZo00tqGaeTTrFDMcWYFuhBkA=",
+      "aarch64-darwin": "sha256-sIqcFb/4DEIjXzKUb5SmVmp9kJRP6K/kXz/S81BZbNs="
     }
   },
   "roborev": {
