@@ -1,22 +1,22 @@
 {
   "nsc": {
-    "version": "0.0.588",
+    "version": "0.0.591",
     "repo": "namespacelabs/foundation",
     "hashes": {
-      "x86_64-linux": "sha256-ukbRDcsxyv9J7aVZfGII6JF8SQoGAkgNbeEnaI8oehA=",
-      "aarch64-linux": "sha256-J11bv7ZPEI6H3Redliq/v0EoTZATokKd2djA5AvQCyA=",
-      "x86_64-darwin": "sha256-PNJTn4Qcn5UpV8/rw2Akr4LyJNQ2AnxICALlxYLfsQA=",
-      "aarch64-darwin": "sha256-1NvthjOFYQaDchDkmkInbV3AADMWd0l1z8FnnvRAWPw="
+      "x86_64-linux": "sha256-U+0w6QzZ3B6AeLqzcbr6bmlqjvHWPfTbL1pfiBODKJ4=",
+      "aarch64-linux": "sha256-IrZqvOOznS91i4/ZRVAMK4u+feQAw3DVCXiPzajOMOM=",
+      "x86_64-darwin": "sha256-HacJHNEDwuF9llG13ConfMOU5Ou7WROSD9UdcY8BTPs=",
+      "aarch64-darwin": "sha256-HCu+EWwnZGDrrNRDunZdePctLuzy+snwZnKkgkVG3K8="
     }
   },
   "devbox": {
-    "version": "0.0.209",
+    "version": "0.0.211",
     "repo": "namespacelabs/devbox",
     "hashes": {
-      "x86_64-linux": "sha256-8nMHm0ENroB0cjguQBWBCN8WPsjAXehE8mqgAI4IUZ0=",
-      "aarch64-linux": "sha256-UE7QEokqgUG9RtTxmcuB6lZRsMc9+Gd3jJI0+rf9aeQ=",
-      "x86_64-darwin": "sha256-yhE7icWVBXc5Z/2Q8gJedjFv4ZFdEpoylcHOi5dphs0=",
-      "aarch64-darwin": "sha256-7xXR7t4YJWZ1Bh1smoGtvrZHNZw3XzDXgf2Ju9D+Rw8="
+      "x86_64-linux": "sha256-EYoFyU6Jl6PVW6wn8Z9OhYRe4HzQu7goDF6Chj47NxE=",
+      "aarch64-linux": "sha256-5p/SXARsjx9e2cVj+PwygnVk2012p0o1oDQVwljot0U=",
+      "x86_64-darwin": "sha256-uhYplAIKSuoPUXBeKRXAB1SjNH3fT/LahdcMGYb/Z/w=",
+      "aarch64-darwin": "sha256-05XCLJ5MncPXfNMnSgzk7J2GZ5a5JgyaS5InSjAk02M="
     }
   },
   "beads": {
@@ -50,13 +50,13 @@
     }
   },
   "signoz-mcp-server": {
-    "version": "0.17.0",
+    "version": "0.18.0",
     "repo": "SigNoz/signoz-mcp-server",
     "hashes": {
-      "x86_64-linux": "sha256-YrZ0miOOuRWTcWzh9D1RV59tRPwV+3APmcJD/rzzAzU=",
-      "aarch64-linux": "sha256-mGzjojvvd9yFQA5M75JkVi02mZJ6t1Ig7appQypzfLU=",
-      "x86_64-darwin": "sha256-pxqckY44foFTuzYJXVE9AwYYJwt3KOkMsWb/nNrTboI=",
-      "aarch64-darwin": "sha256-D3jGrIniTQ0fr7o05E+D8CIa8eRD3bnk1y+8jOV9XEw="
+      "x86_64-linux": "sha256-OCqYstJpdBtN03ML0jGDTydPKUEPyKboSTSmyXw0U/0=",
+      "aarch64-linux": "sha256-q+rFjLVuCaw5Ttxr5SE/q0VoaBu4Jna7+YOylBDrPJ4=",
+      "x86_64-darwin": "sha256-h3bHh6LXKi0483QOvuXM8XND6ER9HLQfJKewZzT6Qpw=",
+      "aarch64-darwin": "sha256-53L8LKuPNRiWWxT19ZDgJfuvCbRx2rIzOmD6pVwT6jI="
     }
   },
   "seaweedfs": {
@@ -70,13 +70,13 @@
     }
   },
   "codex": {
-    "version": "0.166.0",
+    "version": "0.167.0",
     "repo": "openai/codex",
     "hashes": {
-      "x86_64-linux": "sha256-HUSyi8SsmTfX01MiZLqmilB842SVag1Ou4VvMxze4lQ=",
-      "aarch64-linux": "sha256-eCG3fdouYoP7H2PzFlF3onHaiDPoV89nPGyhyds7/MY=",
-      "x86_64-darwin": "sha256-HLZWkCML5ZgsZUuiZV46O1lNzpxVt4Dni/3+/4Kdetk=",
-      "aarch64-darwin": "sha256-VaRAy1eflwq+fHmrGB5UsOpMQZvpnzM7vYaO66ycIfA="
+      "x86_64-linux": "sha256-O7916D3mtYrtKPLPbjOtQj7DH9RwChRXuUvlV+pafG4=",
+      "aarch64-linux": "sha256-DeJh7PHn8wKKeVLwP8ogk/dJJ304WQt4uzL4VndWu7c=",
+      "x86_64-darwin": "sha256-PXxMgylttjtRCOE2Esd/PlAgtsXy/ABL7kE6XMkt6Jk=",
+      "aarch64-darwin": "sha256-r0XtRdlA15mICWIsHAKW0wmO19f61pUoRCLCKL1FRRc="
     }
   },
   "claude-code": {
