@@ -50,13 +50,13 @@
     }
   },
   "signoz-mcp-server": {
-    "version": "0.19.0",
+    "version": "0.20.0",
     "repo": "SigNoz/signoz-mcp-server",
     "hashes": {
-      "x86_64-linux": "sha256-9mh4Ljii/7KXrW0t+l4SUdwDIlsGygSIodMKvDa7iR0=",
-      "aarch64-linux": "sha256-Rt2kfk5zLKjcpVZuW38MUjZ+sYzwRT+Pp79j80/o5ns=",
-      "x86_64-darwin": "sha256-B3AoROMl2kFG0muWTvNsip1m2K6xTC/9UNlrZFjey/Q=",
-      "aarch64-darwin": "sha256-x5pFH0pGcSIJLlAwul7BpAwvSsraQhcFjlunjawzj88="
+      "x86_64-linux": "sha256-p6wT5mXEi9DiS1AXWueh9IuXDvURNF6MTN2Oa+cyDV4=",
+      "aarch64-linux": "sha256-+pf3LFE9NcH88DtZ24T1TEUldos348jTLrjnuHTLzNQ=",
+      "x86_64-darwin": "sha256-vN3H8sDL+eAss7aCZAzLVUJYCtXsuciOjCWPt06Fbrs=",
+      "aarch64-darwin": "sha256-Vn7b8ddmnd3qvKUj0dYlaI2MTuh6sIQOcPFmoHDcnX0="
     }
   },
   "seaweedfs": {
@@ -80,12 +80,12 @@
     }
   },
   "claude-code": {
-    "version": "2.1.327",
+    "version": "2.1.328",
     "hashes": {
-      "x86_64-linux": "sha256-NDx0S6oUv9OChqfLkIcQUfBDeZVtpsW4A6nmYBmnask=",
-      "aarch64-linux": "sha256-rPDvL52o1asI8ZPwB+GaBsv7YIuWovH3WNY6kqOGz/g=",
-      "x86_64-darwin": "sha256-H+dcBd976CSvHtgP+czfK+mR86IhK5fgX8mjv/Lznvk=",
-      "aarch64-darwin": "sha256-dtSCBckmyKaXjPwhcbYxvNAeILut0IVji7LsV76pHFs="
+      "x86_64-linux": "sha256-qYLTgDC5fnUISK3Sy7LfbZpw1VRKIsqbIWo0m6JYZeg=",
+      "aarch64-linux": "sha256-MH+LraJ7N9t1U/rHXoYATj2/9akx/8YRtU/nEM4etSE=",
+      "x86_64-darwin": "sha256-v0ClVVwB5q/mwCj74Hgvk1gPTwg1/V0TAi4DnsdlB+E=",
+      "aarch64-darwin": "sha256-6FVHGQ74zZgwM7phsXGUBFpv6gADXaNJ7+q+2GutrMk="
     }
   }
 }
